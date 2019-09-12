@@ -1,40 +1,50 @@
-<!DOCTYPE html>
-<html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
-<head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Квест Патриоты</title>
-    <!-- Fonts -->
-    <link href="https://fonts.googleapis.com/css?family=Nunito:200,600" rel="stylesheet">
-</head>
-<body>
-<div>
-    @if (Route::has('login'))
-        <div>
-            @auth
-                <a href="{{ url('/home') }}">Home</a>
-                <a href="{{ url('/logout') }}">Logout</a>
-            @else
-                <a href="{{ route('login') }}">Login</a>
+@extends('template')
 
-                @if (Route::has('register'))
-                    <a href="{{ route('register') }}">Register</a>
-                @endif
-            @endauth
-        </div>
-    @endif
+@section('index')
+    <div class="main-interface">
+        <div class="container">
+            <nav class="login">
+                @if (Route::has('login'))
+                    @auth
+                        <a href="{{ url('/home') }}">Личный кабинет</a>
+                        <a href="{{ url('/logout') }}">Выход</a>
+                    @else
+                        <a href="{{ route('login') }}">Вход</a>
 
-    <div>
-        @If (Route::has('login'))
-            @auth
-                <div class="title m-b-md">
-                    <?=Auth::user()->name;?>
-                </div>
-            @else
-                <div>Laravel</div>
+                        @if (Route::has('register'))
+                            <a href="{{ route('register') }}">Регистрация</a>
+                    @endif
+                @endauth
             @endif
-        @endauth
+
+            <!--<div>
+            @If (Route::has('login'))
+                @auth
+                    <div class="title m-b-md">
+<?=Auth::user()->name;?>
+                        </div>
+@else
+                    <div>Laravel</div>
+@endif
+            @endauth
+                </div>-->
+            </nav>
+            <div class="quest-info">
+                <h1>Патриоты поколения Z: точка сборки</h1>
+                <div class="info">
+                    <div class="col-md-4">
+                        <img src="{{ URL::asset('image/none.png') }}"/>
+                    </div>
+                    <div class="col-md-8">
+                        <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor.
+                            Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur
+                            ridiculus
+                            mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat
+                            massa
+                            quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
-</div>
-</body>
-</html>
+@endsection
