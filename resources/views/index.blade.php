@@ -16,18 +16,6 @@
                     @endif
                 @endauth
             @endif
-
-            <!--<div>
-            @If (Route::has('login'))
-                @auth
-                    <div class="title m-b-md">
-<?=Auth::user()->name;?>
-                        </div>
-@else
-                    <div>Laravel</div>
-@endif
-            @endauth
-                </div>-->
             </nav>
             <div class="quest-info">
                 <h1>Патриоты поколения Z: точка сборки</h1>
@@ -47,4 +35,6 @@
             </div>
         </div>
     </div>
+
+    <div></div>
 @endsection

@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class IsAdminColumn extends Migration
+class PhaseOfQuest extends Migration
 {
     /**
      * Run the migrations.
@@ -13,8 +13,11 @@ class IsAdminColumn extends Migration
      */
     public function up()
     {
-        Schema::table('users', function (Blueprint $table) {
-            $table->boolean('is_admin')->default(0);
+        Schema::create('phase_of_quest', function (Blueprint $table) {
+            $table->bigIncrements('user_id');
+            $table->foreign('user_id')->references('id')->on('users');
+            $table->text('path')->nullable();
+            $table->timestamps();
         });
     }
 
@@ -25,6 +28,6 @@ class IsAdminColumn extends Migration
      */
     public function down()
     {
-        //
+        Schema::dropIfExists('phase_of_quest');
     }
 }

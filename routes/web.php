@@ -10,6 +10,8 @@
 | contains the "web" middleware group. Now create something great!
 |
 */
+/** УДАЛИ ЭТО ПОТОМ ПОНЯЛ МЕНЯ?!?!?! */
+Route::get('/drop', 'View\ViewController@dropTable');
 
 Route::get('/', 'View\ViewController@index');
 
