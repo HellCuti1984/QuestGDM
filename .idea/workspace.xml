@@ -1,19 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="d0b685fa-49bc-4bc7-bbb5-a3c4443a3813" name="Default Changelist" comment="release v1.0.1">
-      <change afterPath="$PROJECT_DIR$/resources/views/users/admin.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/users/client.blade.php" afterDir="false" />
+    <list default="true" id="d0b685fa-49bc-4bc7-bbb5-a3c4443a3813" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Auth/LoginController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Auth/LoginController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/HomeController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/HomeController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/View/ViewController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/View/ViewController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/migrations/2014_10_12_000000_create_users_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2014_10_12_000000_create_users_table.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/migrations/2019_09_12_143138_is_admin_column.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/home.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/home.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/index.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/layouts/app.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/layouts/app.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -187,7 +177,7 @@
       <workItem from="1568354150772" duration="2494000" />
       <workItem from="1568537766903" duration="9000" />
       <workItem from="1568551186822" duration="2763000" />
-      <workItem from="1568553965942" duration="2814000" />
+      <workItem from="1568553965942" duration="4784000" />
     </task>
     <task id="LOCAL-00001" summary="release v1.0.1">
       <created>1568313868926</created>
@@ -196,7 +186,21 @@
       <option name="project" value="LOCAL" />
       <updated>1568313868926</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="release v1.0.1">
+      <created>1568564419747</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1568564419747</updated>
+    </task>
+    <task id="LOCAL-00003" summary="release v1.0.1">
+      <created>1568564436231</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1568564436231</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
