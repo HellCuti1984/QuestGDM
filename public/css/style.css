@@ -73,24 +73,49 @@ nav a:hover{color: #fff;}
     border-color: rgba(27,31,35,.35);
     box-shadow: inset 0 0.15em 0.3em rgba(27,31,35,.15);}
 
-.info-element{font-size: 22px; margin-bottom: 15px;}
+.info-element{font-size: 22px; margin-bottom: 15px; color: black;}
 .info-element span{
     padding: 5px;
-    background: #ededed;
-    color: black;
+    background: #fff;
     border-top-left-radius: 10px;
-    border-top-right-radius: 10px;}
+    border-top-right-radius: 10px;
+}
 .info-element div{
     padding: 10px 5px;
     border-top-right-radius: 10px;
     border: 2px solid #fff !important;
     width: 100%;
+    box-shadow: inset 0 0 6px;
+    background: #f6f8fa;
 }
 
 .my-position
 {
     text-align: center;
     margin: 10px 0;
+}
+
+.position-info{
+    font-size: 20px;
+    color: black;
+}
+.position-info div{
+    border: 2px solid #fff;
+    padding: 5px;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    background: #fff;
+}
+.position-info div:last-child
+{
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    width: 100%;
+    background: #f6f8fa;
+    margin-bottom: 15px;
+    box-shadow: inset 0 0 6px;
 }
 /* Профиль пользователя */
 

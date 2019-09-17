@@ -21,38 +21,38 @@
                 <div class="col-md-7">
                     <div class="user-info">
                         <div class="info-element">
-                            <span>Ваш ID:</span>
+                            <span>Ваш ID</span>
                             <div>{{ Auth::user()->id }}</div>
                         </div>
                         <div class="info-element">
-                            <span>ФИО:</span>
+                            <span>ФИО</span>
                             <div>{{ Auth::user()->name }}</div>
                         </div>
                         <div class="info-element">
-                            <span>Возраст:</span>
+                            <span>Возраст</span>
                             <div>{{ Auth::user()->age }}</div>
                         </div>
                         <div class="info-element">
-                            <span>Место учебы/работы:</span>
+                            <span>Место учебы/работы</span>
                             <div>{{ Auth::user()->studywork }}</div>
                         </div>
                         <div class="info-element">
-                            <span>E-mail:</span>
+                            <span>E-mail</span>
                             <div>{{ Auth::user()->email }}</div>
                         </div>
                     </div>
                     <div class="my-position">
-                        <div class="col-md-4 col-sm-4">
-                            <img src="{{ URL::asset('image/award.png') }}" class="img-responsive">
-                            <span>Место</span>
+                        <div class="position-info col-md-4">
+                            <div>1</div>
+                            <div>Место</div>
                         </div>
-                        <div class="col-md-4">
-                            <img src="{{ URL::asset('image/point.png') }}" class="img-responsive">
-                            <span>Баллы</span>
+                        <div class="position-info col-md-4">
+                            <div>24</div>
+                            <div>Баллы за этап</div>
                         </div>
-                        <div class="col-md-4">
-                            <img src="{{ URL::asset('image/all_points.png') }}" class="img-responsive">
-                            <span>Все баллы</span>
+                        <div class="position-info col-md-4">
+                            <div>Баллы</div>
+                            <div>Место</div>
                         </div>
                     </div>
                 </div>
