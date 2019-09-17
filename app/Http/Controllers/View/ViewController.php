@@ -12,11 +12,4 @@ class ViewController extends Controller
     {
         return view('index');
     }
-
-    /** ОБЯЗАТЕЛЬНО УДАЛИ ЭТОТ МЕТОД И РОУТ ИЗ ФАЙЛА РОУТИНГА! ЭТО НЕБЕЗОПАСНО! И ТОЛЬКО ДЛЯ РАЗРАБОТКИ! */
-    public function dropTable()
-    {
-        Schema::dropIfExists('users');
-        return redirect('/');
-    }
 }

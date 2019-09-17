@@ -1,5 +1,9 @@
 @extends('template')
 
 @section('index')
-    <h1>Админушка</h1>
+    <nav>
+        <a>Здраствуйсте, {{ Auth::user()->name }}</a>
+        <a href="/">Главная страница</a>
+        <a href="logout">Выход</a>
+    </nav>
 @endsection
