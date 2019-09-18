@@ -6,13 +6,15 @@
     <title>Квест Патриоты</title>
 
     <!-- Style -->
-    <link rel="stylesheet" href="{{ URL::asset('css/bootstrap.css') }}" />
-    <link rel="stylesheet" href="{{ URL::asset('css/style.css') }}" />
+    <link rel="stylesheet" href="{{ URL::asset('css/bootstrap.css') }}"/>
+    <link rel="stylesheet" href="{{ URL::asset('css/style.css') }}"/>
     <!-- Fonts -->
     <link href="https://fonts.googleapis.com/css?family=Nunito:200,600" rel="stylesheet">
 </head>
 <body>
-@yield('index')
+<div class="content">
+    @yield('index')
+</div>
 <footer>
     <a href="http://gdmnt.ru/" target="_blank">Городской дворец молодежи, &copy;<?=date('Y');?></a>
 </footer>
