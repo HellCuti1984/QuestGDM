@@ -17,6 +17,7 @@ Route::get('/results', 'HomeController@results_of_quest');
 Route::get('/', 'View\ViewController@index');
 
 Route::post('/home', 'Upload\UploadController@image_upload')->name('image_upload');
+Route::post('/', 'Upload\UploadController@file_upload')->name('file_upload');
 
 Auth::routes();
 

@@ -21,7 +21,7 @@
                 <h1>Патриоты поколения Z: точка сборки</h1>
                 <div class="info">
                     <div class="col-md-5">
-                        <img class="img-thumbnail" src="{{ URL::asset('image/none.png') }}"/>
+                        <img class="img-responsive" src="{{ URL::asset('image/none.png') }}"/>
                     </div>
                     <div class="col-md-7">
                         <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor.

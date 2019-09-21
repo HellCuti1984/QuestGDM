@@ -26,6 +26,15 @@ nav a:hover{color: #fff;}
 
 .content{min-height: calc(100vh - 75px);}
 
+.btn{transition: .2s;}
+.btn:hover{background: #f90; transition: .2s;}
+button {
+    color: black;
+    margin: 15px 0;
+    background-color: #e9ecef;
+    background-image: none;
+    border-color: rgba(27, 31, 35, .35);
+}
 footer {
     left: 0;
     bottom: 0;
@@ -80,12 +89,6 @@ footer a:hover{ color: #fff;}
 
 .my-profile h1{margin: 0 0 40px 15px;}
 .my-profile img{margin-bottom: 20px; border-radius: 10px;}
-.my-profile button{
-    color: black; margin: 15px 0;
-    background-color: #e9ecef;
-    background-image: none;
-    border-color: rgba(27,31,35,.35);
-    box-shadow: inset 0 0.15em 0.3em rgba(27,31,35,.15);}
 
 .info-element{font-size: 22px; margin-bottom: 15px; color: black;}
 .info-element span{
@@ -130,6 +133,64 @@ footer a:hover{ color: #fff;}
     background: #f6f8fa;
     margin-bottom: 15px;
     box-shadow: inset 0 0 6px;
+}
+
+.profile-quest{
+    background: #1b6d85;
+    color: #fff;
+    margin-top: 20px;
+    padding: 30px 0;
+}
+
+.profile-quest h1, h4{margin: 10px 0 10px 15px;}
+.profile-quest img{margin: 30px 0; float: right;}
+
+/*таймер*/
+#clockdiv{
+    font-family: sans-serif;
+    color: black;
+    display: inline-block;
+    font-weight: 100;
+    text-align: center;
+    font-size: 30px;
+    margin-top: 20px;
+}
+
+#clockdiv > div{
+    padding: 10px;
+    border-radius: 3px;
+    background: #fff;
+    display: inline-block;
+}
+
+#clockdiv div > span{
+    padding: 15px;
+    border-radius: 3px;
+    background: #f6f8fa;;
+    display: inline-block;
+    box-shadow: inset 0 0 6px;
+}
+
+.smalltext{
+    padding-top: 5px;
+    font-size: 16px;
+}
+
+/*таймер*/
+
+.stage-info{
+    margin: 30px 0;
+    font-size: 16px;
+    height: 100%;
+}
+
+.profile-quest form button{
+    color: black;
+    margin: 15px 0;
+}
+
+.stage-description{
+    margin-left: 15px;
 }
 /* Профиль пользователя */
 

@@ -1,6 +1,4 @@
-@extends('layouts.app')
 
-@section('content')
 <div class="container">
     <div class="row justify-content-center">
         <div class="col-md-8">
@@ -12,9 +10,15 @@
                         </div>
                     @endif
                 </div>
-
+<?=$_POST['content'];?>
+                <script>
+                    ClassicEditor
+                        .create( document.querySelector( '#editor' ) )
+                        .catch( error => {
+                            console.error( error );
+                        } );
+                </script>
             </div>
         </div>
     </div>
 </div>
-@endsection
