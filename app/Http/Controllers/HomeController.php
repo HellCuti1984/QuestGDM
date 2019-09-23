@@ -4,10 +4,9 @@ namespace App\Http\Controllers;
 
 use DB;
 use Auth;
+use App\Models\Client\Stages;
 use Illuminate\Http\Request;
 use App\Models\Client\ResultsQuest;
-use App\Models\Client\Stages;
-use Carbon\Carbon;
 
 class HomeController extends Controller
 {
@@ -29,24 +28,24 @@ class HomeController extends Controller
     public function index()
     {
         $DB = new DB();
-        $Carbon = new Carbon();
-        $Stages = new Stages();
         $ResultsQuest = new ResultsQuest();
 
         $id_user = Auth::user()->id;
         $date = date('y-m-d');
 
-        $id_stage = $DB::table('stages')->where('start_date', '<', $date)->max('id');
-        $all_points = $ResultsQuest::where('id_user', '=', $id_user)->sum('user_points');
+        $id_stage = Stages::where('start_date', '<', $date)->max('id');
 
-        $data = $DB::select('select * from users, results_quests, stages where results_quests.id_user = users.id AND results_quests.id_stage = stages.id AND users.id = ? AND stages.id = ?', array($id_user, $id_stage));
+        $points = $ResultsQuest::where('id_user', $id_user)->where('id_stage', $id_stage)->value('user_points');
+        $all_points = $ResultsQuest::where('id_user', $id_user)->sum('user_points');
+
+        $data = $DB::select('select * from stages where id = ?', array($id_stage));
         if(Auth::user()->is_admin==0)
         {
-            return view('users.client', compact('all_points', 'id_stage', 'data'));
+            return view('users.client', compact('id_stage', 'points', 'all_points',  'data'));
         }
         else
         {
-            return view('users.admin');
+            return view('users.admin', compact('stages'));
         }
     }
 }

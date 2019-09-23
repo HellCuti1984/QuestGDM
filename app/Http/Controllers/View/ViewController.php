@@ -15,10 +15,4 @@ class ViewController extends Controller
         //stage_days = DB::Select('select DATEDIFF(start_date, end_date) FROM stages');
         return view('index');
     }
-
-    public function kawo(Request $request)
-    {
-        $kawo = $request;
-        return view('home', compact($kawo));
-    }
 }

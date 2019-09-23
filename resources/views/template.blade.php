@@ -8,6 +8,7 @@
     <!-- Style -->
     <link rel="stylesheet" href="{{ URL::asset('css/bootstrap.css') }}"/>
     <link rel="stylesheet" href="{{ URL::asset('css/style.css') }}"/>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
     <!-- Fonts -->
     <link href="https://fonts.googleapis.com/css?family=Nunito:200,600" rel="stylesheet">
 
@@ -18,7 +19,7 @@
     @yield('index')
 </div>
 <footer>
-    <a href="http://gdmnt.ru/" target="_blank">Городской дворец молодежи, &copy;<?=date('Y');?></a>
+    <a href="http://gdmnt.ru/" target="_blank">ГДМ &copy;<?=date('Y');?></a>
 </footer>
 <script>
     function getTimeRemaining(endtime) {

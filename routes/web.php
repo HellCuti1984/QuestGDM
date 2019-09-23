@@ -22,6 +22,7 @@ Route::post('/', 'Upload\UploadController@file_upload')->name('file_upload');
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
+Route::get('/home/create_quest/', 'CreateQuestController@CreateQuest')->name('quest_edit');
 
 Route::get('logout', '\App\Http\Controllers\Auth\LoginController@logout');
 
