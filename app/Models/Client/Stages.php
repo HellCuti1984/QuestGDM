@@ -10,6 +10,5 @@ class Stages extends Model
 
     protected $primaryKey = 'id';
 
-    protected $guarded = ['id'];
-    protected $fillable = ['id', 'icon', 'description', 'start_date', 'end_date'];
+    protected $fillable = ['icon', 'title', 'preview_description', 'full_description', 'quest_file', 'start_date', 'end_date'];
 }

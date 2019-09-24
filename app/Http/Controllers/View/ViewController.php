@@ -12,7 +12,6 @@ class ViewController extends Controller
 {
     public function index()
     {
-        //stage_days = DB::Select('select DATEDIFF(start_date, end_date) FROM stages');
         return view('index');
     }
 }

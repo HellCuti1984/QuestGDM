@@ -28,7 +28,7 @@
 
                     @error('email')
                     <span class="invalid-feedback" role="alert">
-                                        <strong>{{ $message }}</strong>
+                                        <strong>Мы не можем найти пользователя с такой почтой</strong>
                                     </span>
                     @enderror
                 </div>

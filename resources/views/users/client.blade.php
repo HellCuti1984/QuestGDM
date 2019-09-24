@@ -13,7 +13,7 @@
                         <img class="img-responsive"
                              src="@if(Auth::user()->avatar == null){{ URL::asset('image/none.png') }}@else{{ asset('storage/'.Auth::user()->avatar) }}@endif"/>
                         <h2>Сменить аватар</h2>
-                        <form action="{{route('image_upload')}}" method="POST" enctype="multipart/form-data">
+                        <form action="" method="POST" enctype="multipart/form-data">
                             {{csrf_field()}}
                             <input type="file" name="image" required>
                             <button class="btn btn-secondary btn-lg btn-block" type="submit">Загрузить</button>
@@ -108,9 +108,9 @@
                         <div class="stage-info">
                             <div class="stage-description">
                                 @if($info->full_description != null)
-                                    {{$info->full_description}}
+                                    {{print($info->full_description)}}
                                 @else
-                                    {{$info->preview_description}}
+                                    {{print($info->preview_description)}}
                                 @endif
                             </div>
                         </div>

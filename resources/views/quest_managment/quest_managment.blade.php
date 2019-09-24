@@ -1,6 +1,121 @@
 @extends('template')
 @section('index')
 
+    <nav>
+        <div class="container">
+            <a style="float: left;">{{ Auth::user()->name }}</a>
+            <a href="/">Главная страница</a>
+            <a href="/home">Кабинет</a>
+        </div>
+    </nav>
+
+    <div class="make-quest">
+        <form method="POST" action="{{route('make_quest_save')}}" class="container">
+            <h1>Создание @if($id_stage==null) 1 @else{{$id_stage+1}}@endif этапа</h1>
+            @csrf
+            <div class="col-md-5">
+                <div class="form-input">
+                    <label>Иконка этапа</label>
+                    <input type="file" class="form-control" name="icon" enctype="multipart/form-data"/>
+                </div>
+                <div class="form-input">
+                    <label>Название этапа</label>
+                    <input type="text" class="form-control" name="title" required/>
+
+                    @error('title')
+                    <span class="invalid-feedback" role="alert">
+                    <strong>Неправильно введено название (см. пояснение)</strong>
+                </span>
+                    @enderror
+                </div>
+            </div>
+            <div class="col-md-7">
+                <div class="make-quest-info">
+                    <h1>Пояснение</h1>
+                    <ul>
+                        <li><strong>Иконка</strong> - используется для на главной странице сайта;</li>
+                        <li><strong>Название</strong>  - название этапа. Заполнение: Цифры, символы, строчные/прописные буквы;</li>
+                        <li><strong>Анонс</strong>  - используется на главной странице сайта, а так же, если нет полного описания. Заполнение: любое;</li>
+                        <li><strong>Полное описание</strong>  - полное описание квеста используется на странице пользователя. Заполнение: любое;</li>
+                        <li><strong>Дата начала</strong>  - указывается дата начала этапа;</li>
+                        <li><strong>Дата конца</strong>  - указывается дата конца этапа;</li>
+                        <li><strong>Создать</strong>  - сохранение этапа;</li>
+                        <li><strong>Отмена</strong>  - отмена действий.</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-md-12">
+                <div class="form-input">
+                    <label>Анонс</label>
+                    <textarea id="preview" class="form-control" name="preview_description"></textarea>
+
+                    @error('preview_description')
+                    <span class="invalid-feedback" role="alert">
+                    <strong>Неправильно введен анонс (см. пояснение)</strong>
+                </span>
+                    @enderror
+                </div>
+
+                <div class="form-input">
+                    <label>Полное описание</label>
+                    <textarea id="full" class="form-control" name="full_description"></textarea>
+
+                    @error('full_description')
+                    <span class="invalid-feedback" role="alert">
+                    <strong>Неправильно введено описание (см. пояснение)</strong>
+                </span>
+                    @enderror
+                </div>
+
+                <div class="col-md-6">
+                    <div class="form-input">
+                        <label>Дата начала</label>
+                        <input type="date" class="form-control" name="start_date" max="2020-01-01" min="2019-09-01"
+                               required/>
+
+                        @error('start_date')
+                        <span class="invalid-feedback" role="alert">
+                    <strong>Неправильно введена дата (см. пояснение)</strong>
+                </span>
+                        @enderror
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="form-input">
+                        <label>Дата конца</label>
+                        <input type="date" class="form-control" name="end_date" max="2020-01-01" min="2019-09-01"
+                               required/>
+
+                        @error('end_date')
+                        <span class="invalid-feedback" role="alert">
+                    <strong>Неправильно введена дата (см. пояснение)</strong>
+                </span>
+                        @enderror
+                    </div>
+                </div>
+
+                <button type="submit" class="btn-success btn-lg">Создать</button>
+                <a href="/home" class="btn-danger btn-lg">Отмена</a>
+            </div>
+        </form>
+    </div>
 
 
+    <script>
+        ClassicEditor
+            .create(document.querySelector('#preview'), {
+                language: 'ru'
+            })
+            .catch(error => {
+                console.error(error);
+            })
+
+        ClassicEditor
+            .create(document.querySelector('#full'), {
+                language: 'ru'
+            })
+            .catch(error => {
+                console.error(error);
+            })
+    </script>
 @endsection
