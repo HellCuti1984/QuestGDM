@@ -1,19 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="d0b685fa-49bc-4bc7-bbb5-a3c4443a3813" name="Default Changelist" comment="release v1.0.6">
+    <list default="true" id="d0b685fa-49bc-4bc7-bbb5-a3c4443a3813" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/CreateQuestController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/QuestManagment/CreateQuestController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Http/Controllers/HomeController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/HomeController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/View/ViewController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/View/ViewController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Models/Client/Stages.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/Client/Stages.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/migrations/2019_09_18_184046_create_stages_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2019_09_18_184046_create_stages_table.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/migrations/2019_09_18_184204_create_results_quests_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2019_09_18_184204_create_results_quests_table.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/css/style.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/auth/passwords/email.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/auth/passwords/email.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Upload/UploadController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Upload/UploadController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/quest_managment/quest_managment.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/quest_managment/quest_managment.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/template.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/template.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/users/admin.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/users/admin.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/users/client.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/users/client.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
     </list>
@@ -206,7 +198,7 @@
       <workItem from="1569076519081" duration="18152000" />
       <workItem from="1569162432161" duration="10671000" />
       <workItem from="1569244915733" duration="20057000" />
-      <workItem from="1569314005928" duration="22798000" />
+      <workItem from="1569314005928" duration="30701000" />
     </task>
     <task id="LOCAL-00001" summary="release v1.0.1">
       <created>1568313868926</created>
@@ -264,7 +256,14 @@
       <option name="project" value="LOCAL" />
       <updated>1569093565083</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="release v1.0.6.1">
+      <created>1569338213591</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1569338213591</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -288,16 +287,12 @@
     <MESSAGE value="release v1.0.2" />
     <MESSAGE value="release v1.0.3" />
     <MESSAGE value="release v1.0.4" />
-    <option name="LAST_COMMIT_MESSAGE" value="release v1.0.4" />
+    <MESSAGE value="release v1.0.6.1" />
+    <option name="LAST_COMMIT_MESSAGE" value="release v1.0.6.1" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
-        <line-breakpoint enabled="true" type="php">
-          <url>file://$PROJECT_DIR$/resources/views/users/admin.blade.php</url>
-          <line>15</line>
-          <option name="timeStamp" value="1" />
-        </line-breakpoint>
         <line-breakpoint enabled="true" type="php">
           <url>file://$PROJECT_DIR$/resources/views/template.blade.php</url>
           <line>28</line>

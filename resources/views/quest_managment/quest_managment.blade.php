@@ -10,13 +10,35 @@
     </nav>
 
     <div class="make-quest">
-        <form method="POST" action="{{route('make_quest_save')}}" class="container">
+        <form method="POST" action="{{route('make_quest_save')}}" enctype="multipart/form-data" class="container">
             <h1>Создание @if($id_stage==null) 1 @else{{$id_stage+1}}@endif этапа</h1>
             @csrf
             <div class="col-md-5">
                 <div class="form-input">
                     <label>Иконка этапа</label>
-                    <input type="file" class="form-control" name="icon" enctype="multipart/form-data"/>
+                    <input type="file" class="form-control" name="icon"/>
+                    @error('icon')
+                    <div class="alert alert-danger">
+                        Иконка должна:
+                        <ul>
+                            <li>Иметь формат: jpeg, png, bmp, gif, svg.</li>
+                            <li>Весить не больше 5Мб.</li>
+                        </ul>
+                    </div>
+                    @enderror
+                </div>
+                <div class="form-input">
+                    <label>Квест-файл</label>
+                    <input type="file" class="form-control" name="quest_file"/>
+                    @error('quest_file')
+                    <div class="alert alert-danger">
+                        Квест-файл должен:
+                        <ul>
+                            <li>Иметь формат: doc, pdf, bmp, gif, svg.</li>
+                            <li>Весить не больше 50Мб.</li>
+                        </ul>
+                    </div>
+                    @enderror
                 </div>
                 <div class="form-input">
                     <label>Название этапа</label>
@@ -33,14 +55,21 @@
                 <div class="make-quest-info">
                     <h1>Пояснение</h1>
                     <ul>
-                        <li><strong>Иконка</strong> - используется для на главной странице сайта;</li>
-                        <li><strong>Название</strong>  - название этапа. Заполнение: Цифры, символы, строчные/прописные буквы;</li>
-                        <li><strong>Анонс</strong>  - используется на главной странице сайта, а так же, если нет полного описания. Заполнение: любое;</li>
-                        <li><strong>Полное описание</strong>  - полное описание квеста используется на странице пользователя. Заполнение: любое;</li>
-                        <li><strong>Дата начала</strong>  - указывается дата начала этапа;</li>
-                        <li><strong>Дата конца</strong>  - указывается дата конца этапа;</li>
-                        <li><strong>Создать</strong>  - сохранение этапа;</li>
-                        <li><strong>Отмена</strong>  - отмена действий.</li>
+                        <li><strong>Иконка</strong> - используется на главной странице сайта;</li>
+                        <li><strong>Квест-файл</strong> - задание для участников (документы docx, pdf, картинки);</li>
+                        <li><strong>Название</strong> - название этапа. Заполнение: Цифры, символы, строчные/прописные
+                            буквы;
+                        </li>
+                        <li><strong>Анонс</strong> - используется на главной странице сайта, а так же, если нет полного
+                            описания. Заполнение: любое;
+                        </li>
+                        <li><strong>Полное описание</strong> - полное описание квеста используется на странице
+                            пользователя. Заполнение: любое;
+                        </li>
+                        <li><strong>Дата начала</strong> - указывается дата начала этапа;</li>
+                        <li><strong>Дата конца</strong> - указывается дата конца этапа;</li>
+                        <li><strong>Создать</strong> - сохранение этапа;</li>
+                        <li><strong>Отмена</strong> - отмена действий.</li>
                     </ul>
                 </div>
             </div>

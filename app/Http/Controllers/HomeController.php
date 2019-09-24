@@ -38,9 +38,9 @@ class HomeController extends Controller
         $points = $ResultsQuest::where('id_user', $id_user)->where('id_stage', $id_stage)->value('user_points');
         $all_points = $ResultsQuest::where('id_user', $id_user)->sum('user_points');
 
-        $stages = Stages::all();
+        $stages = Stages::all()->where('id', $id_stage);
 
-        $data = $DB::select('select * from stages where id = ?', array($id_stage));
+        $data = Stages::all()->where('id', $id_stage);
         if(Auth::user()->is_admin==0)
         {
             return view('users.client', compact('id_stage', 'points', 'all_points',  'data'));

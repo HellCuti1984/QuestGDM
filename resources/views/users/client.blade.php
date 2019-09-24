@@ -13,7 +13,7 @@
                         <img class="img-responsive"
                              src="@if(Auth::user()->avatar == null){{ URL::asset('image/none.png') }}@else{{ asset('storage/'.Auth::user()->avatar) }}@endif"/>
                         <h2>Сменить аватар</h2>
-                        <form action="" method="POST" enctype="multipart/form-data">
+                        <form action="{{ route('image_upload')  }}" method="POST" enctype="multipart/form-data">
                             {{csrf_field()}}
                             <input type="file" name="image" required>
                             <button class="btn btn-secondary btn-lg btn-block" type="submit">Загрузить</button>
@@ -80,7 +80,7 @@
         <div class="container">
             @if(count($data)!=0)
                 @foreach($data as $info)
-                    <h1>Этап {{$id_stage}} - {{$info -> title}}</h1>
+                    <h1>Этап {{$id_stage}} - {{$info->title}}</h1>
                     <h4>Времени осталось:</h4>
                     <div class="row">
                         <div class="col-md-7">
@@ -127,11 +127,9 @@
                                 Поддерживаемые расширения: .doc, .dot, .pdf.
                             </div>
                             @enderror
-                            <form method="POST" action="" enctype="multipart/form-data">
-                                <button class="btn btn-secondary btn-lg btn-block" type="submit">Скачать Квест-файл
-                                </button>
-                            </form>
                         </form>
+
+                            <a href="{{route('download_file')}}" class="btn btn-secondary btn-lg btn-block" type="submit">Скачать Квест-файл</a>
                     </div>
                 @endforeach
             @elseif(count($data)==0)

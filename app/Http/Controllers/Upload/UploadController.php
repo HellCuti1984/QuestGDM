@@ -36,7 +36,7 @@ class UploadController extends Controller
     public function file_upload(Request $request)
     {
         $request->validate([
-            'file_quest' =>'mimes:.doc,.dot,.pdf|max:40000'
+            'file_quest' =>'mimes:doc,dot,pdf|max:40000'
         ]);
 
         $id_stage = Stages::where('start_date', '<', date('y-m-d'))->max('id');
@@ -51,5 +51,12 @@ class UploadController extends Controller
         ResultsQuest::where('id_user', $request->user()->id)->where('id_stage', $id_stage)->update(['user_answer' => $path]);
 
         return redirect('home');
+    }
+
+    public function downloadfile()
+    {
+        $id_stage = Stages::where('start_date', '<', date('y-m-d'))->max('id');
+        $file = Stages::where('id', $id_stage)->value('quest_file');
+        return Storage::download($file);
     }
 }
