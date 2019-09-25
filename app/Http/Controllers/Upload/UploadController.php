@@ -57,6 +57,6 @@ class UploadController extends Controller
     {
         $id_stage = Stages::where('start_date', '<', date('y-m-d'))->max('id');
         $file = Stages::where('id', $id_stage)->value('quest_file');
-        return Storage::download($file);
+        return response()->download(storage_path('app/public/'.$file));
     }
 }

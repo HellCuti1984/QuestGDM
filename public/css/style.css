@@ -40,7 +40,7 @@ a:hover {
 }
 
 .btn {
-    margin: 16px 0;
+    margin-top: 36px; background: #e9ecef; width: 100%; color: black;
     transition: .2s;
 }
 
@@ -129,6 +129,7 @@ footer a:hover {
     height: auto;
     background: #1b6d85;
     color: #fff;
+    padding: 20px 0;
 }
 
 .my-profile h1 {
@@ -200,6 +201,7 @@ footer a:hover {
 
 .profile-quest h1, h4 {
     margin: 10px 0 10px 15px;
+    color: #fff !important;
 }
 
 .profile-quest img {

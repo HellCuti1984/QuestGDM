@@ -24,7 +24,7 @@
                             <td>{{$stage->id}}</td>
                             <td>{{$stage->title}}</td>
                             <td>
-                                <a href="" class="btn btn-secondary btn-lg btn-block">Редактировать</a>
+                                <a href="/home/quest_edit/{{$stage->id}}" class="btn btn-secondary btn-lg btn-block">Редактировать</a>
                             </td>
                         </tr>
                     @endforeach

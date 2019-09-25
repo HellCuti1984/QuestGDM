@@ -22,9 +22,11 @@ Route::post('/home/file_upload', 'Upload\UploadController@file_upload')->name('f
 Route::get('/home/download_file', 'Upload\UploadController@downloadfile')->name('download_file');
 
 /* АДМИН ПАНЕЛЬ */
-Route::get('/home/create_quest/', 'QuestManagment\CreateQuestController@index')->name('quest_edit');
+Route::get('/home/create_quest/', 'QuestManagment\CreateQuestController@index')->name('quest_edit')/*упс*/;
 Route::get('/home/make_quest/', 'QuestManagment\MakeQuestController@index')->name('make_quest');
+Route::get('/home/quest_edit/{stage}', 'QuestManagment\MakeQuestController@EditQuest')->name('edit_quest');
 Route::post('/home/make_quest/save', 'QuestManagment\MakeQuestController@MakeQuest')->name('make_quest_save');
+Route::post('/home/quest_edit/update', 'QuestManagment\MakeQuestController@UpdateQuest')->name('update_quest');
 
 Route::get('/logout', '\App\Http\Controllers\Auth\LoginController@logout');
 
