@@ -93,18 +93,24 @@
                         </div>
                     </div>
                     <div class="row">
-                        <form class="col-md-6" method="POST" action="{{route('file_upload')}}"
-                              enctype="multipart/form-data">
-                            {{ csrf_field() }}
-                            <input type="file" name="file_quest" required>
-                            <button class="btn btn-secondary btn-lg btn-block" type="submit">Загрузить свой ответ
-                            </button>
-                            @error('file_quest')
-                            <div class="alert alert-success">
-                                Поддерживаемые расширения: .doc, .dot, .pdf.
+                        @if($user_answer==null)
+                            <form class="col-md-6" method="POST" action="{{route('file_upload')}}"
+                                  enctype="multipart/form-data">
+                                {{ csrf_field() }}
+                                <input type="file" name="file_quest" required>
+                                <button class="btn btn-secondary btn-lg btn-block" type="submit">Загрузить свой ответ
+                                </button>
+                                @error('file_quest')
+                                <div class="alert alert-success">
+                                    Поддерживаемые расширения: .doc, .dot, .pdf.
+                                </div>
+                                @enderror
+                            </form>
+                        @else
+                            <div class="alert-success col-md-6 user-file-uploaded">
+                                <h3>Спасибо за ваш ответ!</h3>
                             </div>
-                            @enderror
-                        </form>
+                        @endif
                         <div class="col-md-6">
                             <a href="{{route('download_file')}}" class="btn btn-lg"
                                type="submit">Скачать Квест-файл</a>
@@ -163,7 +169,7 @@
             var timeinterval = setInterval(updateClock, 1000);
         }
 
-        var deadline = new Date(Date.parse(new Date()) + 24 * 7 * 60 * 60  * 1000);
+        var deadline = new Date(Date.parse(new Date()) + 24 * 7 * 60 * 60 * 1000);
         initializeClock('clockdiv', deadline);
     </script>
 @endsection

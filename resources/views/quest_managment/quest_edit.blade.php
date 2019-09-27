@@ -16,10 +16,10 @@
                 @csrf
                 <div class="col-md-5">
                     <input name="id" style="display: none;" value="{{$quest->id}}"/>
-                    <img src="{{URL::asset('storage/'.$quest->icon)}}"/>
+                    <img class="img-responsive" src='{{asset('storage/'.$quest->icon)}}'/>
                     <div class="form-input">
                         <label>Иконка этапа</label>
-                        <input type="file" class="form-control" name="icon"/>
+                        <input type="file" name="icon" class="form-control"/>
                         @error('icon')
                         <div class="alert alert-danger">
                             Иконка должна:
@@ -82,7 +82,8 @@
                 <div class="col-md-12">
                     <div class="form-input">
                         <label>Анонс</label>
-                        <textarea id="preview" class="form-control" name="preview_description">{{$quest->preview_description}}</textarea>
+                        <textarea id="preview" class="form-control"
+                                  name="preview_description">{{$quest->preview_description}}</textarea>
 
                         @error('preview_description')
                         <span class="invalid-feedback" role="alert">
@@ -93,7 +94,8 @@
 
                     <div class="form-input">
                         <label>Полное описание</label>
-                        <textarea id="full" class="form-control" name="full_description">{{$quest->full_description}}</textarea>
+                        <textarea id="full" class="form-control"
+                                  name="full_description">{{$quest->full_description}}</textarea>
 
                         @error('full_description')
                         <span class="invalid-feedback" role="alert">
@@ -129,8 +131,10 @@
                         </div>
                     </div>
                     @endforeach
-                    <button type="submit" class="btn-success btn-lg">Создать</button>
-                    <a href="/home" class="btn-danger btn-lg">Отмена</a>
+                    <div style="margin-left: 40px;">
+                        <button type="submit" class="btn-success btn-lg">Создать</button>
+                        <a href="/home" class="btn-danger btn-lg">Отмена</a>
+                    </div>
                 </div>
         </form>
     </div>

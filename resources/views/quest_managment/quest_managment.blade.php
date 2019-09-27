@@ -11,12 +11,12 @@
 
     <div class="make-quest">
         <form method="POST" action="{{route('make_quest_save')}}" enctype="multipart/form-data" class="container">
-            <h1>Создание @if($id_stage==null) 1 @else{{$id_stage+1}}@endif этапа</h1>
+            <h1>Создание @if($id_stage==null) 1 @else{{$id_stage}}@endif этапа</h1>
             @csrf
             <div class="col-md-5">
                 <div class="form-input">
                     <label>Иконка этапа</label>
-                    <input type="file" class="form-control" name="icon"/>
+                    <input type="file" class="form-control" name="icon" required/>
                     @error('icon')
                     <div class="alert alert-danger">
                         Иконка должна:
@@ -29,7 +29,7 @@
                 </div>
                 <div class="form-input">
                     <label>Квест-файл</label>
-                    <input type="file" class="form-control" name="quest_file"/>
+                    <input type="file" class="form-control" name="quest_file" required/>
                     @error('quest_file')
                     <div class="alert alert-danger">
                         Квест-файл должен:
@@ -123,8 +123,10 @@
                     </div>
                 </div>
 
-                <button type="submit" class="btn-success btn-lg">Создать</button>
-                <a href="/home" class="btn-danger btn-lg">Отмена</a>
+                <div style="margin-left: 40px;">
+                    <button type="submit" class="btn-success btn-lg">Создать</button>
+                    <a href="/home" class="btn-danger btn-lg">Отмена</a>
+                </div>
             </div>
         </form>
     </div>

@@ -270,6 +270,16 @@ footer a:hover {
     margin-left: 15px;
 }
 
+.user-file-uploaded{
+    border-radius: 10px;
+    margin-top: 36px;
+}
+.user-file-uploaded h3{
+    margin: 0 !important;
+    padding: 10px;
+    color: black !important;
+}
+
 /* Профиль пользователя */
 
 /* Профиль админа */
