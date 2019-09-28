@@ -15,12 +15,12 @@ class CreateResultsQuestsTable extends Migration
     {
         Schema::create('results_quests', function (Blueprint $table) {
             $table->bigIncrements('id');
-            $table->bigInteger('id_stage')->unsigned()->default(1);
+            $table->bigInteger('id_stage')->unsigned();
             $table->foreign('id_stage')->references('id')->on('stages');
-            $table->bigInteger('id_user')->unsigned()->default(1);
+            $table->bigInteger('id_user')->unsigned();
             $table->foreign('id_user')->references('id')->on('users');
             $table->char('user_answer', 255)->nullable();
-            $table->integer('user_points')->default(0)->nullable();
+            $table->integer('user_points')->nullable();
             $table->timestamps();
         });
     }

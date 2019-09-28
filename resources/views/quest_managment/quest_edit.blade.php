@@ -132,8 +132,8 @@
                     </div>
                     @endforeach
                     <div style="margin-left: 40px;">
-                        <button type="submit" class="btn-success btn-lg">Создать</button>
-                        <a href="/home" class="btn-danger btn-lg">Отмена</a>
+                        <button type="submit" class="btn-success btn-lg">Сохранить изменения</button>
+                        <a href="/home" class="btn-danger btn-lg">Отмена изменений</a>
                     </div>
                 </div>
         </form>

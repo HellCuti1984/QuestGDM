@@ -24,6 +24,7 @@ class CreateAllResultsModelsTable extends Migration
             $table->integer('stage_5')->default(0);
             $table->integer('stage_6')->default(0);
             $table->integer('stage_7')->default(0);
+            $table->integer('resutls')->default(0);
             $table->timestamps();
         });
     }

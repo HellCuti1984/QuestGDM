@@ -2,7 +2,8 @@
 
 namespace App\Http\Controllers\View;
 
-use DB;
+use App\Models\Client\AllResultsModel;
+use Illuminate\Support\Facades\DB;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Schema;
 use App\Http\Controllers\Controller;
@@ -12,6 +13,7 @@ class ViewController extends Controller
 {
     public function index()
     {
-        return view('index');
+        $data = AllResultsModel::all()->where('')->take(5);
+        return view('index', compact('data'));
     }
 }

@@ -28,7 +28,7 @@
                             </td>
                         </tr>
                     @endforeach
-                    @else
+                @else
                 @endif
             </table>
             <h1>Управление</h1>
@@ -41,18 +41,10 @@
                 </a>
             </div>
             <div class="col-md-3">
-                <a href="">
+                <a href="{{route('user_points')}}">
                     <div class="control-element">
                         <img src="{{ URL::asset('image/point.png') }}"/>
                         <span>Выставление баллов</span>
-                    </div>
-                </a>
-            </div>
-            <div class="col-md-3">
-                <a href="">
-                    <div class="control-element">
-                        <img src="{{ URL::asset('image/employee.png') }}"/>
-                        <span>Пользователи</span>
                     </div>
                 </a>
             </div>
