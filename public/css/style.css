@@ -17,7 +17,7 @@ body {
     padding: 0;
     margin: 0;
 }
-
+textarea{color: black !important;}
 nav {
     text-align: right;
     padding: 20px 0;
@@ -117,199 +117,72 @@ footer a:hover {
 }
 
 .info p {
-    text-align: left;
+    text-align: left !important;
     font-size: 18px;
     margin: 50px 0;
 }
+.info .btn{margin: 0;}
+.info a:hover{color: #fff !important; font-size: 20px; transition: 0.1s;}
 
 .main-results{
     margin-top: 20px;
-    padding: 20px 0;
+    padding: 20px 0 40px 0;
     background: #1b6d85;
 }
-
-.limiter {
-    width: 100%;
-    margin: 0 auto;
-}
-
-.container-table100 {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-wrap: wrap;
-    padding: 33px 30px;
-}
-
-.wrap-table100 {
-    width: 1170px;
-}
-
-table {
-    border-spacing: 1;
-    border-collapse: collapse;
-    background: white;
-    border-radius: 10px;
-    overflow: hidden;
-    width: 100%;
-    margin: 0 auto;
-    position: relative;
-}
-table * {
-    position: relative;
-}
-table thead tr {
-    height: 60px;
-    background: #36304a;
-}
-table tbody tr {
-    height: 50px;
-}
-table tbody tr:last-child {
-    border: 0;
-}
-table td, table th {
-    text-align: left;
-}
-table td.l, table th.l {
-    text-align: right;
-}
-table td.c, table th.c {
-    text-align: center;
-}
-table td.r, table th.r {
-    text-align: center;
-}
-
-
-.table100-head th{
-    font-size: 18px;
+.main-results h1{
     color: #fff;
-    line-height: 1.2;
-    font-weight: unset;
+    text-align: center;
+    margin: 20px 0;
 }
 
-tbody tr:nth-child(even) {
-    background-color: #f5f5f5;
-}
-
-tbody tr {
-    font-size: 15px;
-    color: #808080;
-    line-height: 1.2;
-    font-weight: unset;
-}
-
-tbody tr:hover {
-    color: #555555;
-    background-color: #f5f5f5;
-    cursor: pointer;
-}
-
-.column1 {
-    width: 260px;
-    padding-left: 40px;
-}
-
-.column2 {
-    width: 160px;
-}
-
-.column3 {
-    width: 245px;
-}
-
-.column4 {
-    width: 110px;
-    text-align: right;
-}
-
-.column5 {
-    width: 170px;
-    text-align: right;
-}
-
-.column6 {
-    width: 222px;
+.main-info{background: #1b6d85; margin: 20px 0;}
+.main-info h1{
+    margin: 20px 15px;
+    color: #fff;
     text-align: center;
 }
 
+.highlight{width: 100%;}
 
-@media screen and (max-width: 992px) {
-    table {
-        display: block;
-    }
-    table > *, table tr, table td, table th {
-        display: block;
-    }
-    table thead {
-        display: none;
-    }
-    table tbody tr {
-        height: auto;
-        padding: 37px 0;
-    }
-    table tbody tr td {
-        padding-left: 40% !important;
-        margin-bottom: 24px;
-    }
-    table tbody tr td:last-child {
-        margin-bottom: 0;
-    }
-    table tbody tr td:before {
-        font-size: 14px;
-        color: #999999;
-        line-height: 1.2;
-        font-weight: unset;
-        position: absolute;
-        width: 40%;
-        left: 30px;
-        top: 0;
-    }
-    table tbody tr td:nth-child(1):before {
-        content: "Date";
-    }
-    table tbody tr td:nth-child(2):before {
-        content: "Order ID";
-    }
-    table tbody tr td:nth-child(3):before {
-        content: "Name";
-    }
-    table tbody tr td:nth-child(4):before {
-        content: "Price";
-    }
-    table tbody tr td:nth-child(5):before {
-        content: "Quantity";
-    }
-    table tbody tr td:nth-child(6):before {
-        content: "Total";
-    }
-
-    .column4,
-    .column5,
-    .column6 {
-        text-align: left;
-    }
-
-    .column4,
-    .column5,
-    .column6,
-    .column1,
-    .column2,
-    .column3 {
-        width: 100%;
-    }
-
-    tbody tr {
-        font-size: 14px;
-    }
+.highlight thead{
+    box-shadow: inset 0 0 6px;
+    background: #fff;
+    border: 1px solid #fff;
+    color: black;
+    font-size: 18px;
+}
+.highlight tr:last-child{border-radius: 0 0 10px 10px;}
+.highlight td{
+    border: 1px solid #fff;
+    color: #fff;
+    text-align: center;
+    font-size: 18px;
+}
+.highlight th{
+    box-shadow: inset 0 0 6px black;
+    border: 1px solid #fff;
+    text-align: center;
+    font-size: 18px;
+    padding: 5px;
 }
 
-@media (max-width: 576px) {
-    .container-table100 {
-        padding-left: 15px;
-        padding-right: 15px;
-    }
+.highlight tbody td{
+    box-shadow: inset 0 0 6px black;
+    background: #fff;
+    color: black;
+    padding: 5px;
+}
+
+.highlight tbody td:hover{
+    font-size: 20px;
+    color: #fff;
+    background: orange;
+    transition: 0.2s;
+}
+
+@media screen and (max-width: 1000px) {
+    .highlight tbody tr td:nth-child(1n+3){display: none;}
+    .highlight thead tr th:nth-child(1n+3){display: none;}
 }
 
 /* Главная страница */

@@ -85,9 +85,9 @@
                         <div class="stage-info">
                             <div class="stage-description">
                                 @if($info->full_description != null)
-                                    {{print($info->full_description)}}
+                                    {!! $info->full_description !!}
                                 @else
-                                    {{print($info->preview_description)}}
+                                    {!! $info->preview_description !!}
                                 @endif
                             </div>
                         </div>

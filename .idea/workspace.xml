@@ -1,27 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="d0b685fa-49bc-4bc7-bbb5-a3c4443a3813" name="Default Changelist" comment="release v1.0.9">
-      <change afterPath="$PROJECT_DIR$/resources/views/quest_managment/points_main.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/quest_managment/user_points.blade.php" afterDir="false" />
+    <list default="true" id="d0b685fa-49bc-4bc7-bbb5-a3c4443a3813" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/HomeController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/HomeController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Upload/UploadController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Upload/UploadController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Http/Controllers/View/ViewController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/View/ViewController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Models/Client/AllResultsModel.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/Client/AllResultsModel.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/composer.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/migrations/2019_09_18_184204_create_results_quests_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2019_09_18_184204_create_results_quests_table.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/migrations/2019_09_23_132456_create_all_results_models_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2019_09_23_132456_create_all_results_models_table.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/public/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/css/style.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/image/all_points.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/image/award.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/image/edit.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/image/rating.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/image/settings.png" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/index.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/quest_managment/quest_edit.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/quest_managment/quest_edit.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/users/admin.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/users/admin.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/quest_managment/quest_managment.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/quest_managment/quest_managment.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/template.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/template.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/users/client.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/users/client.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -160,11 +149,11 @@
     <property name="settings.editor.selected.configurable" value="configurable.group.build" />
   </component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\Users\HellCuti1984\Desktop\Quest\resources\views\auth" />
-    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\HellCuti1984\Desktop\Quest\app\Http\Controllers\QuestManagment" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\HellCuti1984\Desktop\Quest\resources\views\auth" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -219,7 +208,8 @@
       <workItem from="1569548263773" duration="73000" />
       <workItem from="1569600361265" duration="13316000" />
       <workItem from="1569668827752" duration="2680000" />
-      <workItem from="1569675079997" duration="17615000" />
+      <workItem from="1569675079997" duration="17735000" />
+      <workItem from="1569749362676" duration="13752000" />
     </task>
     <task id="LOCAL-00001" summary="release v1.0.1">
       <created>1568313868926</created>
@@ -305,7 +295,14 @@
       <option name="project" value="LOCAL" />
       <updated>1569548280653</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary="release v1.1.0">
+      <created>1569701162993</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1569701162993</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -333,6 +330,7 @@
     <MESSAGE value="release v1.0.7" />
     <MESSAGE value="release v1.0.8" />
     <MESSAGE value="release v1.0.9" />
-    <option name="LAST_COMMIT_MESSAGE" value="release v1.0.9" />
+    <MESSAGE value="release v1.1.0" />
+    <option name="LAST_COMMIT_MESSAGE" value="release v1.1.0" />
   </component>
 </project>

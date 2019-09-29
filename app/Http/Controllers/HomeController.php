@@ -30,7 +30,7 @@ class HomeController extends Controller
         $id_user = Auth::user()->id;
         $date = date('y-m-d');
 
-        $id_stage = Stages::where('start_date', '<', $date)->max('id');
+        $id_stage = Stages::where('start_date', '<', $date)->where('end_date', '>', $date)->value('id');
 
         $points = ResultsQuest::where('id_user', $id_user)->where('id_stage', $id_stage)->value('user_points');
         $all_points = ResultsQuest::where('id_user', $id_user)->sum('user_points');

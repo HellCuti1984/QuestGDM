@@ -60,7 +60,7 @@
                         <li><strong>Название</strong> - название этапа. Заполнение: Цифры, символы, строчные/прописные
                             буквы;
                         </li>
-                        <li><strong>Анонс</strong> - используется на главной странице сайта, а так же, если нет полного
+                        <li><strong>Анонс</strong> - используется на главной странице сайта, а так же, на странице участника, если нет полного
                             описания. Заполнение: любое;
                         </li>
                         <li><strong>Полное описание</strong> - полное описание квеста используется на странице
@@ -76,7 +76,7 @@
             <div class="col-md-12">
                 <div class="form-input">
                     <label>Анонс</label>
-                    <textarea id="preview" class="form-control" name="preview_description"></textarea>
+                    <textarea id="preview" class="form-control" name="preview_description" required></textarea>
 
                     @error('preview_description')
                     <span class="invalid-feedback" role="alert">
@@ -87,7 +87,7 @@
 
                 <div class="form-input">
                     <label>Полное описание</label>
-                    <textarea id="full" class="form-control" name="full_description"></textarea>
+                    <textarea id="full" class="form-control" name="full_description" required></textarea>
 
                     @error('full_description')
                     <span class="invalid-feedback" role="alert">

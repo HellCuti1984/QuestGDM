@@ -23,61 +23,58 @@
         <div class="container">
             <h1>Патриоты поколения Z: точка сборки</h1>
             <div class="info">
-                <div class="col-md-5">
-                    <img class="img-responsive" src="{{ URL::asset('image/none.png') }}"/>
-                </div>
-                <div class="col-md-7">
-                    <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor.
-                        Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur
-                        ridiculus
-                        mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat
-                        massa
-                        quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu.</p>
-                </div>
+                    <div class="col-md-5" style="float: left;">
+                        <img class="img-responsive" src="{{ URL::asset('storage/'.$icon) }}"/>
+                    </div>
+                    <p>
+                        {!! $stages !!}
+                    </p>
+                @guest
+                    <a href="/register" class="btn btn-lg">Регистрация &#8594;</a>
+                @endguest
+
             </div>
         </div>
     </div>
 
-
+    @if(count($data)!=0)
         <div class="main-results">
             <div class="container">
-                <div class="limiter">
-                    <div class="container-table100">
-                        <div class="wrap-table100">
-                            <div class="table100">
-                                <table>
-                                    <thead>
-                                    <tr class="table100-head">
-                                        <th class="column6">Место</th>
-                                        <th class="column6">Участник</th>
-                                        <th class="column6">Этап I</th>
-                                        <th class="column6">Этап II</th>
-                                        <th class="column6">Этап III</th>
-                                        <th class="column6">Этап IV</th>
-                                        <th class="column6">Этап V</th>
-                                        <th class="column6">Этап VI</th>
-                                        <th class="column6">Общее кол-во баллов</th>
-                                    </tr>
-                                    </thead>
-                                    <tbody>
-                                    <tr>
-                                        <td class="column6"></td>
-                                        <td class="column6"></td>
-                                        <td class="column6">iPhone X 64Gb Grey</td>
-                                        <td class="column6">$999.00</td>
-                                        <td class="column6">1</td>
-                                        <td class="column6">$999.00</td>
-                                        <td class="column6">$999.00</td>
-                                        <td class="column6">$999.00</td>
-                                        <td class="column6">$999.00</td>
-                                    </tr>
-                                    </tbody>
-                                </table>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+                <h1>TOП-5 участников</h1>
+                <table class="highlight">
+                    <thead>
+                    <tr>
+                        <th>Место</th>
+                        <th>ID/Участник</th>
+                        <th>Этап I</th>
+                        <th>Этап II</th>
+                        <th>Этап III</th>
+                        <th>Этап IV</th>
+                        <th>Этап V</th>
+                        <th>Этап VI</th>
+                        <th>Этап VII</th>
+                        <th>Общая сумма баллов</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    @foreach($data as $ket=>$results)
+                        <tr>
+                            <td>{{$ket+1}}</td>
+                            <td>{{$results->id_user}} - {{$results->lastname}} {{$results->firstname}}</td>
+                            <td>{{$results->stage_1}}</td>
+                            <td>{{$results->stage_2}}</td>
+                            <td>{{$results->stage_3}}</td>
+                            <td>{{$results->stage_4}}</td>
+                            <td>{{$results->stage_5}}</td>
+                            <td>{{$results->stage_6}}</td>
+                            <td>{{$results->stage_7}}</td>
+                            <td>{{$results->results}}</td>
+                        </tr>
+                    @endforeach
+                    </tbody>
+                </table>
             </div>
         </div>
+    @endif
 
 @endsection
